@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi Step Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <!-- Form 1 -->
+      <form id="form1" class="section">
+        <h2>Register</h2>
+
+        <article class="input-field">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="enter your name"
+            required
+          />
+        </article>
+        <article class="input-field">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="example@gmail.com"
+            required
+          />
+        </article>
+
+        <footer class="btn-wrapper">
+          <button type="submit">Continue</button>
+        </footer>
+      </form>
+
+      <!-- Form 2 -->
+      <form id="form2" class="section">
+        <h2>Which topics you are interested in?</h2>
+        <div>
+          <article>
+            <input
+              class="hidden-checkbox"
+              type="checkbox"
+              name="topic"
+              id="softwareDev"
+            />
+            <label class="custom-checkbox-label" for="softwareDev"
+              >Software Development</label
+            >
+          </article>
+
+          <article>
+            <input
+              class="hidden-checkbox"
+              type="checkbox"
+              name="topic"
+              id="UX"
+            />
+            <label class="custom-checkbox-label" for="UX"
+              >User Experience</label
+            >
+          </article>
+
+          <!-- Graphic Design -->
+          <article>
+            <input
+              class="hidden-checkbox"
+              type="checkbox"
+              name="topic"
+              id="graphics"
+            />
+            <label class="custom-checkbox-label" for="graphics"
+              >Graphic Design</label
+            >
+          </article>
+        </div>
+
+        <footer class="btn-wrapper">
+          <button type="submit">Continue</button>
+        </footer>
+      </form>
+
+      <!-- Summary Display -->
+      <section class="section" id="summary">
+        <h2>Summary</h2>
+        <div class="article-container">
+          <article>
+            <p>
+              <span class="title">Name: </span>
+              <span class="retrieved-data" id="name-display">name</span>
+            </p>
+            <p>
+              <span class="title">Email:</span>
+              <span class="retrieved-data" id="email-display"
+                >emily@emilyjohnsonstl.com</span
+              >
+            </p>
+          </article>
+          <article>
+            <h3 class="title">Topics:</h3>
+            <ul id="topics-display">
+              <li>Test</li>
+              <li>Test</li>
+            </ul>
+          </article>
+        </div>
+
+        <footer class="btn-wrapper">
+          <button id="confirm-btn">Confirm</button>
+        </footer>
+      </section>
+
+      <!-- next Button display -->
+      <footer>
+        <div>
+          <p>Step <span id="current-step">a</span> of 3</p>
+          <div class="steppers">
+            <div id="stepper1" class="stepper next-stepper"></div>
+            <div id="stepper2" class="stepper next-stepper"></div>
+            <div id="stepper3" class="stepper next-stepper"></div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
